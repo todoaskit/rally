@@ -106,7 +106,7 @@
             width: 100%;
             margin-top: 10px;
         }
-        
+
         textarea {
             width: 70%;
         }
@@ -180,16 +180,16 @@
             </div>
 
             <div class="post">
-                <h3><img alt="Rally" src="img/rally_brand.png" width="60" height="60" /> 현재 느린 인터넷을 제보해 학교에 알려봐요!</h3>
+                <h3><img alt="Rally" src="img/rally_brand.png" width="60" height="60" /> Tell the school about the slow Internet!</h3>
             </div>
 
             <div class="post row">
                 <div class="col-sm-4">
                     <!--현재 위치-->
-                    <h4>현재 어떤 건물에 계신가요?(제보하려는 건물) *</h4>
+                    <h4>What building are you currently in?</h4>
                     <!--<h6>마커를 움직여 선택해주세요</h6>-->
-                    <button onclick="displayBldgList()" class="btn btn-default btn-block">내 위치 검색</button>
-                    <div style="color: gray"><i class="fa fa-map-marker" aria-hidden="true"></i> 위치정보 수집</div>
+                    <button onclick="displayBldgList()" class="btn btn-default btn-block">Search my location</button>
+                    <div style="color: gray"><i class="fa fa-map-marker" aria-hidden="true"></i> location information</div>
                     <p id="loc-msg"></p>
                     <div id="loading"></div>
                     <div class="building-list-container">
@@ -197,7 +197,7 @@
                             <tbody></tbody>
                         </table>
                         <div style="display:none;">
-                            <p>찾는 건물이 없나요? </p> <a href="./petition.html" onclick="trackOutboundLink('./petition.html','bldgrequest'); return false;" type="button" class="btn btn-link">우리 건물 추가 요청하기</a></div>
+                            <p>Are there any buildings you are looking for? </p> <a href="./petition.html" onclick="trackOutboundLink('./petition.html','bldgrequest'); return false;" type="button" class="btn btn-link">Request additional building</a></div>
                     </div>
                 </div>
                 <div class="col-sm-8">
@@ -207,16 +207,16 @@
 
             <div class="post">
                 <!--연결 타입-->
-                <h4>어떤 유형의 인터넷을 사용하던 중이었나요?*</h4>
+                <h4>What type of internet were you using? *</h4>
                 <form autocomplete="off">
                     <ul class="nav btn-group inline question-type internet-type">
-                        <li><a type="submit" conn-type=0 onclick="return pickInternetType(0);" class="btn active"><i class="fa fa-wifi" aria-hidden="true"></i> Welcome_kaist<br><span></span></a>
+                        <li><a type="submit" conn-type=0 onclick="return pickInternetType(0);" class="btn active"><i class="fa fa-wifi" aria-hidden="true"></i> School's Wi-Fi<br><span></span></a>
                         </li>
                         <li>
-                            <a type="submit" conn-type=1 onclick="return pickInternetType(1);" class="btn"><i class="fa fa-wifi" aria-hidden="true"></i> 그 외 와이파이<br><span></span></a>
+                            <a type="submit" conn-type=1 onclick="return pickInternetType(1);" class="btn"><i class="fa fa-wifi" aria-hidden="true"></i> Other Wi-Fi<br><span></span></a>
                         </li>
                         <li>
-                            <a type="submit" conn-type=2 onclick="return pickInternetType(2);" class="btn"><i class="fa fa-plug" aria-hidden="true"></i> 랜선<br><span></span></a>
+                            <a type="submit" conn-type=2 onclick="return pickInternetType(2);" class="btn"><i class="fa fa-plug" aria-hidden="true"></i> LAN<br><span></span></a>
                         </li>
                     </ul>
                 </form>
@@ -226,19 +226,19 @@
 
     <div id="exTab1">
         <div class="container post issue-question">
-            <h4>현재 선택하신 인터넷에 연결이 되었나요? *</h4>
+            <h4>Are you connected to the selected Internet? *</h4>
             <form autocomplete="off">
                 <ul class="nav btn-group inline question-type issue-type">
                     <li>
                         <a type="submit" onclick="return pickIssueType(true);" class="btn active" href="#1a" data-toggle="tab">
                             <i class="fa fa-link" aria-hidden="true"></i> YES
-                            <br><span>연결되었다</span>
+                            <br><span>Connected</span>
                         </a>
                     </li>
                     <li>
                         <a type="submit" onclick="return pickIssueType(false);" class="btn" href="#conn" data-toggle="tab">
                             <i class="fa fa-chain-broken" aria-hidden="true"></i> NO
-                            <br><span>(테더링, 3G, LTE 사용 중)</span>
+                            <br><span>3G or LTE</span>
                         </a>
                     </li>
                 </ul>
@@ -385,34 +385,34 @@
 
             <div class="row tab-pane active container internet-slow" id="1a">
                 <div class="post">
-                    <h1>인터넷 속도 측정</h1>
+                    <h1>About Internet speed</h1>
                 </div>
 
                 <div style="margin-top:0px;" class="post">
                     <div class="in-content">
                         <div id="internet-question" class="row">
-                            <h4 id="question-speed">인터넷 응답이 얼마나 느린가요?</h4>
+                            <h4 id="question-speed">How slow is your Internet response?</h4>
                             <label class="radio-vertical">
-                                <input type="radio" name="speed" value="1" description="즉각적이다 (0~0.1s)" checked> 즉각적이다 (0~0.1s)
+                                <input type="radio" name="speed" value="1" description="즉각적이다 (0~0.1s)" checked> React instantaneously (0~0.1s)
                             </label>
                             <label class="radio-vertical">
-                                <input type="radio" name="speed" value="2" description="지연을 느끼지만, 사용에 지장은 없다 (0.1~1s)"> 지연을 느끼지만, 사용에 지장은 없다 (0.1~1s)
+                                <input type="radio" name="speed" value="2" description="지연을 느끼지만, 사용에 지장은 없다 (0.1~1s)"> Lose the feeling of operating directly on the data (0.1~1s)
                             </label>
                             <label class="radio-vertical">
-                                <input type="radio" name="speed" value="3" description="지연으로 인해 원하는 만큼 사용하지 못하고 있다 (1~10s)"> 지연으로 인해 원하는 만큼 사용하지 못하고 있다 (1~10s)
+                                <input type="radio" name="speed" value="3" description="지연으로 인해 원하는 만큼 사용하지 못하고 있다 (1~10s)"> Want to perform other tasks while waiting for the computer to finish (1~10s)
                             </label>
                             <label class="radio-vertical">
-                                <input type="radio" name="speed" value="3" description="응답하지 않는다 (10s~)"> 응답하지 않는다 (10s~)
+                                <input type="radio" name="speed" value="3" description="응답하지 않는다 (10s~)"> No response (10s~)
                             </label>
-                            <h4 id="question-consistency" style="margin-top: 30px;">인터넷 속도가 일정한가요?</h4>
+                            <h4 id="question-consistency" style="margin-top: 30px;">Is the Internet speed constant?</h4>
                             <label class="radio-vertical">
-                                <input type="radio" name="consistency" value="1" description="일정한 속도를 유지한다" checked> 일정한 속도를 유지한다
-                            </label>
-                            <label class="radio-vertical">
-                                <input type="radio" name="consistency" value="2" description="속도가 일정치 않아서 신경쓰이긴 하지만 쓸만하다"> 속도가 일정치 않아서 신경쓰이긴 하지만 쓸만하다
+                                <input type="radio" name="consistency" value="1" description="일정한 속도를 유지한다" checked> The speed is constant
                             </label>
                             <label class="radio-vertical">
-                                <input type="radio" name="consistency" value="3" description="종잡을 수 없다"> 종잡을 수 없다
+                                <input type="radio" name="consistency" value="2" description="속도가 일정치 않아서 신경쓰이긴 하지만 쓸만하다"> It's a bit slow, but it's useful
+                            </label>
+                            <label class="radio-vertical">
+                                <input type="radio" name="consistency" value="3" description="종잡을 수 없다"> Cannot catch
                             </label>
                         </div>
                     </div>
@@ -422,44 +422,44 @@
                 <!-- Post -->
                 <div class="post">
                     <div id="activitySection">
-                        <h1>현재 인터넷으로 하고 있는 활동은?(택 1)</h1>
+                        <h1>What activities are you currently doing on the Internet?</h1>
                     </div>
                     <div class="in-content">
                         <div class="row">
                             <a id="kaist" class="activity col-md-4 col-sm-4 col-xs-6">
-                                <p>카이스트 포탈, klms 등</p>
-                                <img type="kaist" src="img/activity/kaist.png" style="padding-top: 20px;">
+                                <p>School portal</p>
+                                <img type="kaist" src="img/activity/portal.png">
                             </a>
                             <a id="web" class="activity col-md-4 col-sm-4 col-xs-6">
-                                <p>웹 브라우징</p>
+                                <p>Web browsing</p>
                                 <img type="web" src="img/activity/web.png" alt="">
                             </a>
                             <a id="conferencing" class="activity col-md-4 col-sm-4 col-xs-6">
-                                <p>웹 컨퍼런싱(skype 등)</p>
+                                <p>Web conferencing (skype)</p>
                                 <img type="conferencing" src="img/activity/conferencing.png" alt="">
                             </a>
                             <a id="twitter" class="activity col-md-4 col-sm-4 col-xs-6">
-                                <p>트위터</p>
+                                <p>Twitter</p>
                                 <img type="twitter" src="img/activity/twitter.png" alt="">
                             </a>
                             <a id="facebook" class="activity col-md-4 col-sm-4 col-xs-6">
-                                <p>페이스북</p>
+                                <p>Facebook</p>
                                 <img type="facebook" src="img/activity/facebook.png" alt="">
                             </a>
                             <a id="file" class="activity col-md-4 col-sm-4 col-xs-6">
-                                <p>파일 업로드/다운로드</p>
+                                <p>File upload/download</p>
                                 <img type="file" src="img/activity/file.png" alt="">
                             </a>
                             <a id="music" class="activity col-md-4 col-sm-4 col-xs-6">
-                                <p>뮤직 스트리밍</p>
+                                <p>Music streaming</p>
                                 <img width="90" type="music" src="img/activity/music.png" alt="">
                             </a>
                             <a id="video" class="activity col-md-4 col-sm-4 col-xs-6">
-                                <p>비디오 스트리밍</p>
+                                <p>Video streaming</p>
                                 <img type="video" src="img/activity/video.png" alt="">
                             </a>
                         </div>
-                        <h6>* 정확한 활동 제보는 인터넷이 느린 이유를 분석하는데 많은 도움이 됩니다</h6>
+                        <h6>* Reporting accurate activity can help analyzing why the Internet is slow</h6>
                     </div>
                 </div>
                 <!-- /post -->
@@ -476,8 +476,8 @@
                 <div class="row">
                     <form id="finalStage" action="" onsubmit="return postSignature();">
                         <button onclick="collectData()" class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            미리보기</button>
-                        <button type="submit" id="submitSection" class="btn btn-primary" data-loading-text="Loading...">제출</button>
+                            Preview</button>
+                        <button type="submit" id="submitSection" class="btn btn-primary" data-loading-text="Loading...">Submit</button>
                         <!--<i class="fa fa-google" aria-hidden="true"></i>
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                         <i class="fa fa-twitter" aria-hidden="true"></i>-->
@@ -519,7 +519,7 @@
         <!-- /post -->
 
         <a style="color: gray" href="#compose-modal" data-toggle="modal" id="compose-button">
-            <i class="fa fa-shield" aria-hidden="true"></i> 제출하신 자료는 관리자와 정보통신팀 외에 공개되지 않습니다(개인정보보호방침 보기)</a>
+            <i class="fa fa-shield" aria-hidden="true"></i> The submitted materials will not be disclosed except for the manager and the information communication team (see privacy policy)</a>
     </div>
 
     <div class="modal fade" id="compose-modal" tabindex="-1" role="dialog">
